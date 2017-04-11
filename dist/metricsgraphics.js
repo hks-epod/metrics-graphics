@@ -5124,7 +5124,10 @@ MG.button_layout = function(target) {
 
     plot.data_median = 0;
     plot.update_transition_duration = (args.transition_on_update) ? 1000 : 0;
-    plot.display_area = args.area && !args.use_data_y_min && args.data.length <= 1 && args.aggregate_rollover === false;
+    //plot.display_area = args.area && !args.use_data_y_min && args.data.length <= 1 && args.aggregate_rollover === false;
+      
+    plot.display_area = args.area && !args.use_data_y_min;
+      
     plot.legend_text = '';
     mg_line_graph_generators(args, plot, svg);
     plot.existing_band = svg.selectAll('.mg-confidence-band').nodes();
